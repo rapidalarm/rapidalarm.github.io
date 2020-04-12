@@ -1,10 +1,29 @@
 # Assembly Instructions
-The Illinois Ventmon is designed to be easy to produce from readily available parts. The components can be assembled on a breadboard, hand-soldered to a printed circuit board, or mass-produced using pick-and-place electronic manufacturing.
 
-## Materials
+There are two variants of the Ventmon which have slightly different design requirements.
 
-## Soldering the board
+- Through hole - Uses entirely through hole components for easier hand assembly.  Board designed with hobbyist level PCB router in mind.
+- Surface mount - All surface mount components.  Designed for mass-production on pick and place.
 
-## Programming the microcontroller
+Assembly instruction and bill of materials for each variant are below.
 
-## Assembling the module
+## Through Hole
+
+- [Design Files]()
+- [Source Code]()
+
+![Through hole top](pictures/board_tht_top.png)
+![Through hole bottom](pictures/board_tht_bottom.png)
+
+### Bill of Materials
+
+### Assembly
+
+## Surface Mount
+
+- [Design Files]()
+- [Source Code]()
+
+### Bill of Materials
+
+### Assembly
