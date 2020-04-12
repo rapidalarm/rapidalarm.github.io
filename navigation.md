@@ -1,13 +1,11 @@
 # Illinois Ventmon
 
 
-[gimmick:theme](cosmo)
+[gimmick:theme](journal)
 
-[Documentation]()
-
-  * [User Guide](userguide.md)
-  * [Assembly Instructions](hardware.md)
-  * [Theory of Operation](algorithm.md)
+[User Guide](userguide.md)
+[Assembly Instructions](hardware.md)
+[Theory of Operation](algorithm.md)
 
 [Source](https://github.com/ventmon/ventmon)
 
