@@ -1,6 +1,9 @@
-# Algorithm
+# Theory of Operation
 
-- foo
-- bar
+## Pressure-cycled ventilation
 
-**bold text**
+## Sensing system
+
+## Alarm algorithm
+
+## Tracking algorithm
