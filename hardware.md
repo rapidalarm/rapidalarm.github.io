@@ -1,6 +1,6 @@
 # Assembly Instructions
 
-There are two variants of the Ventmon which have slightly different design requirements.
+There are two variants of the Rapidalarm which have slightly different design requirements.
 
 - Through hole - Uses entirely through hole components for easier hand assembly.  Board designed with hobbyist level PCB router in mind.
 - Surface mount - All surface mount components.  Designed for mass-production on pick and place.
