@@ -48,4 +48,6 @@ Rapidalarm can be programmed from the Arduino IDE.  A 6-pin [USBasp programmer](
 
 The IDE is now ready and should be able to program Rapidalarm.
 
+**WARNING**: Never simultaneously connect external power and the programmer, for risk of damaging the programmer's regulator.
+
 ![](pictures/isp.jpg)
