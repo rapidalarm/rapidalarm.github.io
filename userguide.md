@@ -57,13 +57,13 @@ The alarm will persist until manually reset by the caretaker by pressing any of 
 
 The alarm conditions are summarized in the following table:
 
-Condition |	Default setting |	Adjustable range | Error Code
---------- | --------------- | --------------- | ----------------
-Non-cycling | 15 sec | 5-30 sec | nc
-Low pressure | 5 cm H2O | ??? | LP
-High pressure | 40 cm H2O | ??? | HP
-Low respiratory rate | 5 breaths/min | ??? | Lr
-High respiratory rate | 30 breaths/min | ??? | Hr
+Code | Condition |	Default setting |	Adjustable range | Adjustment interval
+---- | --------- | --------------- | --------------- | ----------------
+nc | Non-cycling | 10 sec | 5-30 sec | 5 sec
+LP | Low pressure | 2 cm H2O | 1-20 cm H2O | 1 cm H2O
+HP | High pressure | 40 cm H2O | 30-90 cm H2O | 5 cm H2O
+Lr | Low respiratory rate | 6 breaths/min | 5-15 breaths/min | 1 breath/min
+Hr | High respiratory rate | 30 breaths/min | 15-60 breaths/min | 5 breaths/min
 
 - **Non-cycling**
   - Triggers if the pressure has not changed in more than the specified number of seconds. This indicates that the ventilator has stopped working.
