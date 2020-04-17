@@ -1,5 +1,7 @@
 # Illinois Rapidalarm
 
+<link rel="stylesheet" type="text/css" href="styles.css">
+
 
 [gimmick:theme](journal)
 
