@@ -4,7 +4,7 @@
 
 ![](pictures/rapid_alarm_photo.png)
 
-<iframe style="display: block;margin: 3em auto 3em auto;" width="560" height="315" src="https://www.youtube.com/embed/mHu1bKLIiLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe style="display: block;margin: 3em auto 3em auto;" width="560" height="315" src="https://www.youtube.com/embed/8bSyTYTYtEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 The Illinois RapidAlarm is a sensor and alarm module for use with pressure-cycled ventilators such as the [Illinois RapidVent](https://rapidvent.grainger.illinois.edu/). The module connects to a ventilator circuit and monitors the pressure delivered to the patient airway. It creates an audible alarm when it detects that the system is not operating normally and displays information about pressure and breathing rate. The Illinois RapidAlarm is designed to be rapidly produced from readily available parts. The electronic kit can be assembled by hand or by machine using through-hole or surface-mount parts. This website contains hardware designs, software code, and documentation to allow anyone to build their own Illinois RapidAlarm or to adapt the design to their own needs. All resources are provided with open licenses (see [legal disclaimer](legal.md)).
 

@@ -42,6 +42,9 @@ There is a 6-pin ISP header on the bottom side of the board for programming.  Ei
 
 ## Surface Mount
 
+![Through hole top](pictures/board_smd_top.png)
+![Through hole bottom](pictures/board_smd_bottom.png)
+
 - [Design Files](https://github.com/rapidalarm/rapidalarm/tree/master/pcb/pcb_smd)
 - [Source Code]()
 
