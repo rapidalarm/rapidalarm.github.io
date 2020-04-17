@@ -33,6 +33,7 @@ The Illinois RapidAlarm monitors pressure in the patient airway using an electro
 
 ## Resources
 The [Illinois RapidAlarm repository on Github](https://github.com/rapidalarm/rapidalarm) contains the resources required to produce the device:
+
 - Printed circuit board design files, schematics, and bill of materials
 - Enclosure design files for 3D printing
 - Software source code to run on the microcontroller

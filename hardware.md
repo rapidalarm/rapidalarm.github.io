@@ -10,6 +10,7 @@ Assembly instruction notes and bills of materials for each variant are below.
 ## Through Hole
 
 - [Design Files](https://github.com/rapidalarm/rapidalarm/tree/master/pcb/pcb_proto)
+- [Case](https://github.com/rapidalarm/rapidalarm/tree/master/cad/enclosure_3Dprint)
 - [Source Code](https://github.com/rapidalarm/rapidalarm/tree/master/code/alarm)
 
 ![Through hole top](pictures/board_tht_top.png)

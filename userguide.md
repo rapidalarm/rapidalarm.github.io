@@ -42,7 +42,7 @@ Rapidalarm has 3 buttons for changing modes and adjusting alarm settings
 The modes that can be cycled through with the **Mode** button are
 
 - **Display**
-  - Default mode.  Cycles through displaying measured metrics as in the [Display](userguide.md/#Display) section
+  - Default mode.  Cycles through displaying measured metrics as in the [Display](#!userguide.md/#Display) section
 - **Set High pressure** 
     - Adjust threshold for **High pressure** alarm condition. The display will show `HP` along with the current setting as 2 flashing digits.
 - **Set Low pressure** 
@@ -59,11 +59,11 @@ The alarm conditions are summarized in the following table:
 
 Code | Condition |	Default setting |	Adjustable range | Adjustment interval
 ---- | --------- | --------------- | --------------- | ----------------
-nc | Non-cycling | 10 sec | 5-30 sec | 5 sec
-LP | Low pressure | 2 cm H2O | 1-20 cm H2O | 1 cm H2O
-HP | High pressure | 40 cm H2O | 30-90 cm H2O | 5 cm H2O
-Lr | Low respiratory rate | 6 breaths/min | 5-15 breaths/min | 1 breath/min
-Hr | High respiratory rate | 30 breaths/min | 15-60 breaths/min | 5 breaths/min
+`nc` | Non-cycling | 10 sec | 5-30 sec | 5 sec
+`LP` | Low pressure | 2 cm H2O | 1-20 cm H2O | 1 cm H2O
+`HP` | High pressure | 40 cm H2O | 30-90 cm H2O | 5 cm H2O
+`Lr` | Low respiratory rate | 6 breaths/min | 5-15 breaths/min | 1 breath/min
+`Hr` | High respiratory rate | 30 breaths/min | 15-60 breaths/min | 5 breaths/min
 
 - **Non-cycling**
   - Triggers if the pressure has not changed in more than the specified number of seconds. This indicates that the ventilator has stopped working.
