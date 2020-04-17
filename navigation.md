@@ -3,11 +3,12 @@
 
 [gimmick:theme](journal)
 
+[Legal Disclaimer](legal.md)
 [User Guide](userguide.md)
 [Assembly Instructions](hardware.md)
-[Theory of Operation](algorithm.md)
+<!-- [Theory of Operation](algorithm.md) -->
 
-[Source](https://github.com/ventmon/ventmon)
+[Source](https://github.com/rapidalarm/rapidalarm)
 
 [Team](team.md)
 
@@ -28,4 +29,4 @@
 
 <!-- [Menu Item 3](pages/item3.md) -->
 
-[gimmick:themechooser](Choose theme)
+<!-- [gimmick:themechooser](Choose theme) -->
