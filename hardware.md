@@ -29,7 +29,7 @@ Assembly instruction notes and bills of materials for each variant are below.
 | 4 character display | LTC-4627JF         | 1        | [Link](https://www.digikey.com/product-detail/en/lite-on-inc/LTC-4627JF/160-1548-5-ND/408221)                                                                                                                      | Should work with most common anode 4 char displays. |
 | 10k Resistor        | CF14JT10K0         | 1        | [Link](https://www.digikey.com/product-detail/en/stackpole-electronics-inc/CF14JT10K0/CF14JT10K0CT-ND/1830374)                                                                                                     | Any 10k will do                                     |
 | Barrel connector    | 694106301002       | 1        | [Link](https://www.digikey.com/product-detail/en/wurth-electronics-inc/694106301002/732-5930-ND/5047522?utm_adgroup=Barrel%20-%20Power%20Connectors&gclid=EAIaIQobChMIkbmT3LPS6AIVxJJbCh2gkADkEAQYAyABEgKTwfD_BwE) | 2.1mm ID, 5.5mm OD, center pos.                     |
-| 5V adapter          | PSM03A-050-R       | 1        | [Link](https://www.digikey.com/product-detail/en/phihong-usa/PSM03A-050-R/993-1236-ND/4031882)                                                                                                                     |                                                     |
+| 5V adapter          | PSM03A-050-R       | 1        | [Link](https://www.digikey.com/product-detail/en/phihong-usa/PSM03A-050-R/993-1236-ND/4031882)                                                                                                                     | .                                                   |
 
 Many of these components can be substituted with alternative components:
 
@@ -51,7 +51,7 @@ There is a 6-pin ISP header on the bottom side of the board for programming.  Ei
 
 ## Programming
 
-Rapidalarm can be programmed from the Arduino IDE.  A 6-pin [USBasp programmer](https://www.ebay.com/itm/USB-AVR-Programmer-w-6-Pin-10-Pin-IDC-ISP-Connector-For-USBASP/382191022734?hash=item58fc5c328e:g:zbcAAOSw1EhZjC5Z) is required.  Alternatively, one could use an [Arduino as an ISP programmer](https://www.arduino.cc/en/tutorial/arduinoISP).  It may also be desirable to use a 6-pin [POGO adapter](
+Rapidalarm can be programmed from the Arduino IDE.  A 6-pin [USBasp programmer](https://www.ebay.com/itm/USB-AVR-Programmer-w-6-Pin-10-Pin-IDC-ISP-Connector-For-USBASP/382191022734?hash=item58fc5c328e:g:zbcAAOSw1EhZjC5Z) is required.  Alternatively, one could use an [Arduino as an ISP programmer](https://www.arduino.cc/en/tutorial/arduinoISP).  It may also be desirable to use a 6-pin [POGO adapter](https://www.ebay.com/itm/POGO-ICSP-AVR-Pogo-Pin-ICSP-ISP-Adapter-Kit/153891594446?hash=item23d4a760ce:g:jNYAAOSwzAxehgvi)
 
 1. Follow the [instructions](https://github.com/MCUdude/MiniCore#boards-manager-installation) for installing the MiniCore boards package.
 2. Select these options in the `Tools` menu of the Arduino IDE.  Default options should work except for those in bold.
