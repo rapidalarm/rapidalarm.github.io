@@ -1,83 +1,95 @@
 # User Guide
 
-## Hardware Setup
+## Setup
 
-1. Connect Rapidalarm pressure sensor to manometer port of ventilator.
-2. Connect Micro USB to power source.  Rubber band power cable to strain relief.
+![Setup diagram](pictures/system_diagram_photo.png)
 
-As soon as power is connected, Rapidalarm will beep once to verify the buzzer is working, then begin cycling through measured parameters on its display.
+1. Attach a tee adapter to the ventilator circuit on the patient side. If the ventilator is equipped with a manometer port, that port may be used instead.
+2. Use a 1/16” (1.6 mm) inner diameter tube to connect the pressure sensor port on the Illinois RapidAlarm to the port on the ventilator. (Note: the picture above shows a series of tubes of increasing diameter. During use in clinical settings, direct connections should be used to minimize complexity.)
+3. Connect the Illinois RapidAlarm to a 5V power supply. The device is available with either a barrel connector (pictured) or a micro-USB power connector. The micro-USB connector can be plugged into any USB port, including on a phone charger or battery pack.
+4. Change alarm settings if desired (see below). Settings are reset to defaults whenever power is interrupted.
+
+As soon as power is connected, the Illinois RapidAlarm will beep once to verify the buzzer is working, then begin cycling through measured parameters on its display.
 
 ## Display
 
-Once Rapidalarm is powered on, it will begin cycling through three metrics:
+The Illinois RapidAlarm cycles through three display measurements:
 
-- PIP - peak inspiratory pressure (cm H20)
-- PEEP - positive end expiratory pressure (cm H20)
-- respiratory rate (breaths/min)
+| Code | Metric | Display range | Display resolution |
+| ---- | ------ | ------------- | ------------------ |
+| `PI` | PIP (High pressure) | 0-99 cm H2O | 1 cm H2O |
+| `PE` | PEEP (Low pressure) | 0-99 cm H2O | 1 cm H2O |
+| `rr` | Respiratory rate | 0-99 breaths/min | 1 breath/min |
 
-![PIP](pictures/pi.jpg)
+<!--![PIP](pictures/pi.jpg)
 ![PEEP](pictures/pe.jpg)
-![RR](pictures/rr.jpg)
-
-The diagram below shows a typical pressure waveform for a pressure-cycled ventilator. The ventilator fills the lungs until the pressure reaches PIP, which triggers a valve to open for exhalation. Another valve triggers inhalation when the pressure has dropped below PEEP.
+![RR](pictures/rr.jpg)-->
 
 ![Pressure cycle figure](pictures/pressure_diagram.png).
 
-**High pressure (HP)**: the maximum pressure in a breath cycle in cm H2O, which should correspond to the peak inspiratory pressure (PIP) setting of the ventilator.
+**PIP (`PI`)**: the peak inspiratory pressure in cm H2O, measured as the maximum pressure in a breath cycle.
 
-**Low pressure (LP)**: the minimum pressure in a breath cycle in cm H2O, which corresponds to the positive end-expiratory pressure (PEEP) during mandatory breathing. In assisted breathing, the minimum pressure may not correspond to PEEP.
+**PEEP (`PE`)**: the positive end-expiratory pressure in cm H2O, measured as the minimum pressure in the breath cycle. In assisted breathing, the minimum pressure may not equal the PEEP setting of the ventilator.
 
-**Respiratory rate (rr)**: the number of complete breath cycles per minute, calculated from the time between the last several breaths.
+**Respiratory rate (`rr`)**: the number of complete breath cycles per minute, calculated from the time between the last several breaths.
 
-**WARNING**: The displayed parameters are averaged over several breath cycles and may take up to 30 seconds to reflect large changes in ventilator settings.
+**WARNING**: Although the system tracks pressure in real time to trigger alarms, the displayed measurements are averaged over several breath cycles and may take up to 30 seconds to reflect large changes in ventilator settings. The measurements may also be inaccurate when breathing is irregular, shortly after alarm settings are changed, or during and shortly after an alarm condition.
 
 ## User interface
 
-Rapidalarm has 3 buttons for changing modes and adjusting alarm settings
+The Illinois RapidAlarm has 3 buttons for changing modes and adjusting alarm settings
 
 - **Mode** - cycles through display or setting modes
 - **Up** - adjust alarm settings in the various settings modes
 - **Down** - adjust alarm settings in the various settings modes
 
-The modes that can be cycled through with the **Mode** button are
+The Illinois RapidAlarm has three operating modes:
 
-- **Display**
-  - Default mode.  Cycles through displaying measured metrics as in the [Display](#!userguide.md/#Display) section
-- **Set High pressure** 
-    - Adjust threshold for **High pressure** alarm condition. The display will show `HP` along with the current setting as 2 flashing digits.
-- **Set Low pressure** 
-   - Adjust threshold for **Low pressure** alarm condition.  The display will show `LP` along with the current setting as 2 flashing digits.
+- **DISPLAY MODE**
+  - Cycles through displaying PIP, PEEP, and respiratory rate every 2.5 seconds
+  - Default mode when powered on.  
+  - The monitor automatically returns to DISPLAY MODE from SET MODE after 30 seconds of no input.
+- **ALARM MODE**
+  - Alarm sounds continuously.
+  - Display flashes alarm code.
+  - Press any button to silence the alarm and return to DISPLAY MODE.
+- **SET MODE**
+  - Change the alarm thresholds.
+  - Display shows alarm code and flashing threshold setting.
+  - Press **Mode** button to cycle through settings:
+     1.	Non-cycling (`nc`) alarm time (seconds)
+     2.	Low pressure (`Lp`) threshold (cm H2O)
+     3.	High pressure (`Hp`) threshold (cm H2O) 
+     4.	Low respiratory rate (`Lr`) threshold (breaths/min)
+     5.	High respiratory rate (`Hr`) threshold (breaths/min)
+  - Press **Up** button to increase the threshold
+  - Press **Down** button to decrease the threshold
+  - When finished, wait 30 seconds or press **Mode** button repeatedly until the device returns to DISPLAY MODE.
+  
+WARNING: All alarm thresholds will return to their default settings if power is interrupted.
+WARNING: The PIP, PEEP, and respiratory rate measurements are often inaccurately tracked while parameters are being changed and during alarm conditions. After the device enters DISPLAY MODE, it may take up to 30 seconds for the measurement displays to be accurate.
 
-Rapidalarm will automatically return to the Display mode after 30 seconds of no user input.
 
 ## Alarm conditions
 
-Rapidalarm will generate an audible alarm and flash an error code if it detects that the ventilator is not operating normally. 
-The alarm will persist until manually reset by the caretaker by pressing any of the 3 buttons or until power is lost.
+The Illinois RapidAlarm generates an audible alarm if it detects that the ventilator is not operating normally. The alarm will continue until it is reset by pressing any button on the device. The alarm conditions are summarized in the following table:
 
-The alarm conditions are summarized in the following table:
+| Code | Condition |	Default setting |	Adjustable range | Adjustment interval |
+| ---- | --------- | --------------- | --------------- | ---------------- |
+| `nc` | Non-cycling | 10 sec | 5-30 sec | 5 sec |
+| `LP` | Low pressure | 2 cm H2O | 1-20 cm H2O | 1 cm H2O |
+| `HP` | High pressure | 40 cm H2O | 30-90 cm H2O | 5 cm H2O |
+| `Lr` | Low respiratory rate | 6 breaths/min | 5-15 breaths/min | 1 breath/min |
+| `Hr` | High respiratory rate | 30 breaths/min | 15-60 breaths/min | 5 breaths/min |
 
-Code | Condition |	Default setting |	Adjustable range | Adjustment interval
----- | --------- | --------------- | --------------- | ----------------
-`nc` | Non-cycling | 10 sec | 5-30 sec | 5 sec
-`LP` | Low pressure | 2 cm H2O | 1-20 cm H2O | 1 cm H2O
-`HP` | High pressure | 40 cm H2O | 30-90 cm H2O | 5 cm H2O
-`Lr` | Low respiratory rate | 6 breaths/min | 5-15 breaths/min | 1 breath/min
-`Hr` | High respiratory rate | 30 breaths/min | 15-60 breaths/min | 5 breaths/min
+**Non-cycling (`nc`)**: Triggers if the pressure has not changed in more than the specified number of seconds. Non-cycling can indicate a disconnection, obstruction, or apnea. 
 
-- **Non-cycling**
-  - Triggers if the pressure has not changed in more than the specified number of seconds. This indicates that the ventilator has stopped working.
+**Low pressure (`LP`)**: Triggers immediately if the pressure falls below the specified threshold. Pressure-cycled ventilators are designed to maintain positive pressure, so a drop to atmospheric pressure could indicate a disconnection.
 
-- **Low pressure**
-  - Triggers if the pressure falls below the specified threshold. Pressure-cycled ventilators are designed to maintain positive pressure at all times, so a drop to atmospheric pressure could indicate a disconnection.
+**High pressure (`HP`)**: Triggers immediately if the pressure exceeds the specified threshold. Pressure-cycled ventilators should never exceed the pressure set by the PIP valve, so a high pressure reading could indicate an obstruction.
 
-- **High pressure**
-  - Triggers if the pressure exceeds the specified threshold. Pressure-cycled ventilators should never exceed the user-specified PIP value, so a high pressure reading could indicate a mechanical failure.
+**Low respiratory rate (`Lr`)**: Triggers if the average breathing rate is too low. This could indicate that the ventilator has not been adjusted correctly.
 
-- **Low respiratory rate**
-  - Triggers if the breathing rate is too slow. This could indicate that the ventilator has not been adjusted correctly.
+**High respiratory rate (`Hr`)**: Triggers if the average breathing rate is too fast. This could occur if the ventilator has not been adjusted correctly or if the tidal volume is too low.
 
-- **High respiratory rate**
-  - Triggers if the breathing rate is too fast. This could occur if the ventilator has not been adjusted correctly or if the tidal volume is too low.
-
-**WARNING**: The alarm can sometimes trigger incorrectly shortly after the pressure settings of the ventilator have changed. These false alarms typically occur within 30 seconds of adjustments.
+**WARNING**: The alarm can sometimes trigger incorrectly when the pressure settings of the ventilator have changed. These false alarms typically occur within 30 seconds of adjustments. If false alarms occur frequently, try increasing the non-cycling alarm time.
