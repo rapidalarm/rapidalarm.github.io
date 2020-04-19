@@ -1,6 +1,6 @@
-# Rapidalarm Website
+# Illinois RapidAlarm Website
 
-Engineering website for Rapidalarm project. [http://ventmon.github.io]()
+Website for the Illinois RapidAlarm project. [http://rapidalarm.github.io]()
 
 ### Publishing to Website
 
