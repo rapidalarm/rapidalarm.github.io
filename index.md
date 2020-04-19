@@ -1,22 +1,22 @@
-# Illinois RapidAlarm - A sensor and alarm module for pressure-cycled ventilators
+# Illinois RapidAlarm - Emergency ventilator sensor and alarm system
 
 *Developed at the [Grainger College of Engineering](https://grainger.illinois.edu/) at the University of Illinois at Urbana-Champaign with support from Carle Health and Creative Thermal Solutions, Inc.*
 
-![](pictures/rapid_alarm_photo.png)
-
 <iframe style="display: block;margin: 3em auto 3em auto; width: 75%;" height="315" src="https://www.youtube.com/embed/8bSyTYTYtEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-The Illinois RapidAlarm is a sensor and alarm module for use with pressure-cycled ventilators such as the [Illinois RapidVent](https://rapidvent.grainger.illinois.edu/). The module connects to a ventilator circuit and monitors the pressure delivered to the patient airway. It creates an audible alarm when it detects that the system is not operating normally and displays information about pressure and breathing rate. The Illinois RapidAlarm is designed to be rapidly produced from readily available parts. The electronic kit can be assembled by hand or by machine using through-hole or surface-mount parts. This website contains hardware designs, software code, and documentation to allow anyone to build their own Illinois RapidAlarm or to adapt the design to their own needs. All resources are provided with open licenses (see [legal disclaimer](legal.md)).
+The Illinois RapidAlarm is a sensor and alarm module for use with emergency pressure-cycled ventilators such as the [Illinois RapidVent](https://rapidvent.grainger.illinois.edu/) that do not have built-in monitoring systems. The module connects to a ventilator circuit and monitors the pressure delivered to the patient airway. It produces an audible alarm when it detects a problem with the ventilator, such as a disconnection or obstruction, and also displays information about airway pressure and breathing rate. The Illinois RapidAlarm is designed to be quickly produced from readily available parts. The device can be assembled by hand or manufactured. This website contains open-source hardware designs, firmware code, and documentation to allow anyone to build their own Illinois RapidAlarm or to adapt the design to their own needs.
 
 ## Overview
 
-![](pictures/rapid_alarm_setup.png)
+Many emergency ventilators that have been developed in response to the COVID-19 pandemic do not have monitoring and alarm features that are available on more advanced ventilators. Pressure-cycled ventilators like the [Illinois RapidVent](https://rapidvent.grainger.illinois.edu/) are relatively easy to produce and are powered by air pressure, making them convenient solutions for emergency ventilation, but they require constant supervision by medical personnel. An external monitoring device, like the Illinois RapidAlarm, can provide important information to caregivers and alert them to problems that require immediate attention. 
 
-The Illinois RapidAlarm monitors pressure in the patient airway using an electronic pressure sensor, which connects to a ventilator circuit using a tube. The pressure signal is processed by an ATmega328 microcontroller (identical to the one found in the popular Arduino hobbyist kit), which calculates ventilation parameters and monitors for alarm conditions. A seven-segment display shows three measurements: high pressure, low pressure, and respiratory rate. A buzzer creates an audible alarm when the ventilator stops cycling or when the pressure or respiratory rate is outside normal operating parameters. The system can be powered by any 5 volt power supply, such as a USB phone charger or AC wall-mount adapter. The user controls the system using three buttons.
+![](pictures/labeled_photos.png)
+
+The Illinois RapidAlarm, shown above, monitors pressure in the patient airway using an electronic pressure sensor, which connects to a ventilator circuit using a tube and tee adapter. The pressure signal is processed by an ATmega328 microcontroller (identical to the one found in the popular Arduino hobbyist kit), which calculates ventilation parameters and monitors for alarm conditions. A seven-segment display shows three measurements: peak inspiratory pressure (PIP), positive end-expiratory pressure (PEEP), and respiratory rate. A buzzer produces an audible alarm when the ventilator stops cycling or when the pressure or respiratory rate is outside normal operating range. The alarm conditions can be adjusted using three buttons on the front of the device.
 
 ### Features
 - Connects to a pressure-cycled ventilator using standard tubing adapters.
-- Powered by any 5 volt source. Available with barrel connections for standard wall-mount power adapters or micro-USB connections for USB phone chargers or battery packs.
+- Powered by any 5 volt source, such as wall-mount adapters or USB phone chargers or battery packs.
 - Audible alarm when the ventilator stops cycling, e.g. due to obstruction or disconnect.
 - Audible alarm when pressure or respiratory rate fall outside their normal range.
 - Alarm thresholds can be configured using buttons on the device.
@@ -36,7 +36,7 @@ The [Illinois RapidAlarm repository on Github](https://github.com/rapidalarm/rap
 
 - Printed circuit board design files, schematics, and bill of materials
 - Enclosure design files for 3D printing
-- Software source code to run on the microcontroller
+- Firmware source code to run on the microcontroller
 - Instructions for producing and assembling the device
 - User documentation
 
@@ -48,11 +48,10 @@ The [Illinois RapidAlarm repository on Github](https://github.com/rapidalarm/rap
 | Patient population | Patients using pressure-cycled ventilators |
 | Compatible ventilators | [Illinois RapidVent](https://rapidvent.grainger.illinois.edu/) and similar pressure-cycled ventilators |
 | Patient interface | Connects via 1/16” (1.6mm) inner diameter tube to tee fitting of breathing circuit |
-| Environment of care | Stationary or portable (battery pack required) |
+| Environment of care | Stationary or portable (battery pack required for portable use) |
 | Sterility | Not sterile |
-| Size | 82 mm x 48 mm x 15.5 mm (enclosure) |
-| Power required | 5 V DC, 100 mA (e.g. USB power) |
-| Power connector | Barrel jack or micro-USB variants available |
+| Size | 82 mm x 48 mm x 15.5 mm|
+| Power required | 5 V DC, 100 mA |
 
 ### Displayed measurements
 
@@ -75,5 +74,3 @@ The [Illinois RapidAlarm repository on Github](https://github.com/rapidalarm/rap
 
 ## Contact
 Please contact the Illinois RapidAlarm team lead, Professor Andrew Singer (acsinger@illinois.edu), with any inquiries.
-
-2020 Copyright University of Illinois Board of Trustees.  This work is licensed under CC BY 4.0 license: https://creativecommons.org/licenses/by/4.0/
