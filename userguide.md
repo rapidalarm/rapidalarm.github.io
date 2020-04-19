@@ -5,8 +5,11 @@
 ![Setup diagram](pictures/system_diagram_photo.png)
 
 1. Attach a tee adapter to the ventilator circuit on the patient side. If the ventilator is equipped with a manometer port, that port may be used instead.
-2. Use a 1/16” (1.6 mm) inner diameter tube to connect the pressure sensor port on the Illinois RapidAlarm to the port on the ventilator. (Note: the picture above shows a series of tubes of increasing diameter. During use in clinical settings, direct connections should be used to minimize complexity.)
-3. Connect the Illinois RapidAlarm to a 5V power supply. The device is available with either a barrel connector (pictured) or a micro-USB power connector. The micro-USB connector can be plugged into any USB port, including on a phone charger or battery pack.
+2. Use a 1/16” (1.6 mm) inner diameter tube to connect the pressure sensor port on the Illinois RapidAlarm to the port on the ventilator. 
+
+  Note: The picture above shows a series of tubes of increasing diameter. During use in clinical settings, direct connections should be used to minimize complexity.
+  
+3. Connect the Illinois RapidAlarm to a 5 volt power supply. <!--The device is available with either a barrel connector (pictured) or a micro-USB power connector. The micro-USB connector can be plugged into any USB port, including on a phone charger or battery pack.-->
 4. Change alarm settings if desired (see below). Settings are reset to defaults whenever power is interrupted.
 
 As soon as power is connected, the Illinois RapidAlarm will beep once to verify the buzzer is working, then begin cycling through measured parameters on its display.
@@ -25,7 +28,7 @@ The Illinois RapidAlarm cycles through three display measurements:
 ![PEEP](pictures/pe.jpg)
 ![RR](pictures/rr.jpg)-->
 
-![Pressure cycle figure](pictures/pressure_diagram.png).
+![Pressure cycle figure](pictures/pressure_diagram.png)
 
 **PIP (`PI`)**: the peak inspiratory pressure in cm H2O, measured as the maximum pressure in a breath cycle.
 
