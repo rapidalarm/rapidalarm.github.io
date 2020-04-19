@@ -1,8 +1,11 @@
 # Team
 
+Please contact the team lead, Andy Singer (acsinger@illinois.edu) with any inquiries.
+
+
 | Name | Role | Affiliation |
 | ---- | ---- | ----------- |
-| Andrew Singer | Team lead | University of Illinois |
+| Andy Singer | Team lead | University of Illinois |
 | Jenny Amos | Compliance | University of Illinois |
 | Ryan Corey | Algorithm development | University of Illinois |
 | Shandra Jamison | Clinical advisor | University of Illinois |
