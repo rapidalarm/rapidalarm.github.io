@@ -25,6 +25,8 @@ The repository also includes a [surface-mount board design](https://github.com/r
 
 ### 2. Enclosure
 
+![Enclosure](pictures/enclosure.png)
+
 The Illinois RapidAlarm uses an enclosure that can be produced using 3D printer:
 
 [3D-printed enclosure design files](https://github.com/rapidalarm/rapidalarm/tree/master/cad/enclosure_3Dprint)
@@ -56,7 +58,7 @@ The following alternative NXP pressure sensors can be used instead of the MPXV50
 1. MPXV5010GP, MPXV5010DP
 2. MPXV5100GC/GP/DP, MPXV5050GC/GP/DP, MPXV4006GC/GP/DP, MPXV7025GC/GP/DP - requires software scaling change
 
-### Required accessories
+### 4. Required accessories
 
 The following accessories are required to use the Illinois RapidAlarm. They should be included with the device if they are not already available at the medical facility.
 
@@ -64,18 +66,17 @@ The following accessories are required to use the Illinois RapidAlarm. They shou
 - Tee adapter (connects the ventilator to the tube)
 - Tube with 1/16" (1.6mm) inner diameter (connects the tee adapter to the alarm module)
 
-### Tools and supplies
+### 5. Tools and supplies
 
 The following tools and supplies are required to produce the Illinois RapidAlarm:
+
 - A soldering iron and solder to assemble the circuit board
 - A screwdriver to assemble the enclosure
 - A label maker or permanent marker to label the buttons on the enclosure
 - A computer and AVR programmer to load the firmware onto the microcontroller. Here are several options:
-  - A 6-pin [USBasp programmer](https://www.ebay.com/itm/USB-AVR-Programmer-w-6-Pin-10-Pin-IDC-ISP-Connector-For-USBASP/382191022734?hash=item58fc5c328e:g:zbcAAOSw1EhZjC5Z).  
-  - Use an [Arduino as an ISP programmer](https://www.arduino.cc/en/tutorial/arduinoISP).  
-  - Use a 6-pin [pogo adapter](https://www.ebay.com/itm/POGO-ICSP-AVR-Pogo-Pin-ICSP-ISP-Adapter-Kit/153891594446?hash=item23d4a760ce:g:jNYAAOSwzAxehgvi). (If using this option, there is no need to install 6-pin headers on the circuit board.)
-
-Note that a single programmer can be used to program multiple boards. 
+  - A 6-pin [USBasp programmer](https://www.ebay.com/itm/USB-AVR-Programmer-w-6-Pin-10-Pin-IDC-ISP-Connector-For-USBASP/382191022734?hash=item58fc5c328e:g:zbcAAOSw1EhZjC5Z)  
+  - Use an [Arduino as an ISP programmer](https://www.arduino.cc/en/tutorial/arduinoISP)  
+  - Use a 6-pin [pogo adapter](https://www.ebay.com/itm/POGO-ICSP-AVR-Pogo-Pin-ICSP-ISP-Adapter-Kit/153891594446?hash=item23d4a760ce:g:jNYAAOSwzAxehgvi) (With this option, there is no need to install 6-pin headers on the circuit board.)
 
 ## Step 1: Assemble the circuit board
 
@@ -112,7 +113,7 @@ The Illinois RapidAlarm uses the Arduino platform to simplify microcontroller de
 
 ## Step 3: Assemble the Illinois RapidAlarm
 
-![RapidAlarm enclosure](pictures/rapid_alarm_photo.png)
+![Assembled Illinois RapidAlarm](pictures/rapid_alarm_photo.png)
 
 Once the circuit board is assembled and programmed, you are ready to assemble all the pieces.
 
