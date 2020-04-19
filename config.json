@@ -1,7 +1,7 @@
 {
-  "additionalFooterText": "Rapidalarm Team - ",
+  "additionalFooterText": "2020 Copyright University of Illinois Board of Trustees. Software is licensed under the MIT License; all other designs and documentation are licensed under the CC BY 4.0 license: https://creativecommons.org/licenses/by/4.0/",
   "anchorCharacter": "#",
   "lineBreaks": "gfm",
-  "title": "Rapidalarm",
+  "title": "Illinois RapidAlarm",
   "useSideMenu": true
 }
