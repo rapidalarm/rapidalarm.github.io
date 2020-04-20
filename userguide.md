@@ -4,8 +4,8 @@
 
 ![Setup diagram](pictures/system_diagram_photo.png)
 
-1. Attach a tee adapter to the ventilator circuit on the patient side. If the ventilator is equipped with a manometer port, that port may be used instead.
-2. Use a 1/16” (1.6 mm) inner diameter tube to connect the pressure sensor port on the Illinois RapidAlarm to the port on the ventilator. 
+1. Attach a respiratory adapter with a stem to the ventilator circuit on the patient side. If the ventilator is equipped with a manometer port, that port may be used instead.
+2. Use a 1/8” (3.2 mm) inner diameter tube to connect the pressure sensor port on the Illinois RapidAlarm to the port on the ventilator. 
 
   Note: The picture above shows a series of tubes of increasing diameter. During use in clinical settings, direct connections should be used to minimize complexity.
   
