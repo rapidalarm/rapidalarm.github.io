@@ -49,7 +49,7 @@ The following components are required to assemble the Illinois RapidAlarm. The l
 | 1 | 4 character display | LTC-4627JF         | [Link](https://www.digikey.com/product-detail/en/lite-on-inc/LTC-4627JF/160-1548-5-ND/408221)                                                                                                                      | Should work with most common anode 4 char displays. |
 | 1 | 10k resistor        | CF14JT10K0         | [Link](https://www.digikey.com/product-detail/en/stackpole-electronics-inc/CF14JT10K0/CF14JT10K0CT-ND/1830374)                                                                                                     | Any 10k will do                                     |
 | 1 | Barrel connector    | 694106301002       | [Link](https://www.digikey.com/product-detail/en/wurth-electronics-inc/694106301002/732-5930-ND/5047522?utm_adgroup=Barrel%20-%20Power%20Connectors&gclid=EAIaIQobChMIkbmT3LPS6AIVxJJbCh2gkADkEAQYAyABEgKTwfD_BwE) | 2.1mm ID, 5.5mm OD, center pos.                     |
-| 1 | 5V adapter          | PSM03A-050-R       | [Link](https://www.digikey.com/product-detail/en/phihong-usa/PSM03A-050-R/993-1236-ND/4031882)                                                                                                                     | .                                                   |
+| 1 | 5V adapter          | PSM03A-050-R       | [Link](https://www.digikey.com/product-detail/en/phihong-usa/PSM03A-050-R/993-1236-ND/4031882)                                                                                                                     |                                                    |
 | 1 | 6-pin 0.1" header (optional) |  68602-406HLF  | [Link](https://www.digikey.com/product-detail/en/amphenol-icc-fci/68602-406HLF/609-4934-ND/1657836) | Required if using  a 6-pin programmer (see below) |
 | 4 | 2-56x3/4" screws | PMSSS 256 0075 PH  | [Link](https://www.digikey.com/product-detail/en/b-f-fastener-supply/PMSSS-256-0075-PH/H702-ND/274913) | |
 | 4 | 2-56 nuts |  HNZ 256  | [Link](https://www.digikey.com/product-detail/en/b-f-fastener-supply/HNZ-256/H212-ND/5737) | |
@@ -64,7 +64,7 @@ The following accessories are required to use the Illinois RapidAlarm. They shou
 
 - 5 volt power supply (e.g.,  [PSM03A-050-R](https://www.digikey.com/product-detail/en/phihong-usa/PSM03A-050-R/993-1236-ND/4031882)
 - Respiratory adapter with stem (connects the ventilator to the tube)
-- Tube with 1/16" (1.6mm) inner diameter (connects the repiratory adapter stem to the alarm module)
+- Tube with 1/8" (3.2 mm) inner diameter (connects the repiratory adapter stem to the alarm module)
 
 ### 5. Tools and supplies
 
