@@ -117,6 +117,6 @@ The Illinois RapidAlarm uses the Arduino platform to simplify microcontroller de
 
 Once the circuit board is assembled and programmed, you are ready to assemble all the pieces.
 
-1. Place the circuit board inside the bottom piece of the encloser.
+1. Place the circuit board inside the bottom piece of the enclosure.
 2. Use the 2-56x3/4" screws to secure the top piece of the enclosure to the bottom piece.
 3. Label the MODE, UP, and DOWN buttons using a permanent marker or label maker.
