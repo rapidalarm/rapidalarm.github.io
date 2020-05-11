@@ -1,8 +1,8 @@
-[gimmick: math]()
-
 # How It Works
 
 The Illinois RapidAlarm is an electronic sensor module that attaches to a pressure-cycled ventilator and measures pressure in the patient airway. It displays information about pressure and respiration rate and creates an alarm when the ventilator stops working correctly. This page explains how the RapidAlarm’s measurement and alarm algorithms work. These algorithms are implemented in `algorithms.h` in the RapidAlarm firmware.
+
+[gimmick: math]()
 
 ## Pressure-cycled ventilation
 
