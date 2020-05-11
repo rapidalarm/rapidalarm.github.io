@@ -28,14 +28,14 @@ The Illinois RapidAlarm uses a pair of nonlinear recursive filters to track the 
 
 TODO: Envelope figure
 
-Let \\(( p[t] ))\\ be the discrete-time pressure signal from the sensor. The envelopes are given by
-$$v_{high}[t]=\begin{cases}
+Let \\( p[t] \\) be the discrete-time pressure signal from the sensor. The envelopes are given by
+$$ v_{high}[t]=\begin{cases}
 (\alpha_A v_{high}[t-1]+(1-\alpha_A )p[t], & if p[t]≥v_{high}[t]\\
-\alpha_R v_{high}[t-1]+(1-\alpha_R )p[t],if p[t]<v_{high}[t] \end{cases}$$
-$$v_{low}[t]=\begin{cases}(\alpha_A v_{low}[t-1]+(1-\alpha_A )p[t], & if p[t]≤v_{low}[t]\\
-\alpha_R v_{low}[t-1]+(1-\alpha_R )p[t],if p[t]>v_{low}[t] \end{cases}$$
+\alpha_R v_{high}[t-1]+(1-\alpha_R )p[t],if p[t]<v_{high}[t] \end{cases} $$
+$$ v_{low}[t]=\begin{cases}(\alpha_A v_{low}[t-1]+(1-\alpha_A )p[t], & if p[t]≤v_{low}[t]\\
+\alpha_R v_{low}[t-1]+(1-\alpha_R )p[t],if p[t]>v_{low}[t] \end{cases} $$
 
-The main advantage of the recursive envelope tracker is that it does not need to store any past values of the pressure signal in memory. If instead we wanted to measure the maximum of the signal over the last two seconds, we would need to store about 200 past measurements. With the recursive tracker, more recent measurements are automatically weighted more strongly; each sample’s contribution to the average decays exponentially over time. The rate of decay is controlled by the \\((\alpha))\\ coefficients. 
+The main advantage of the recursive envelope tracker is that it does not need to store any past values of the pressure signal in memory. If instead we wanted to measure the maximum of the signal over the last two seconds, we would need to store about 200 past measurements. With the recursive tracker, more recent measurements are automatically weighted more strongly; each sample’s contribution to the average decays exponentially over time. The rate of decay is controlled by the \\(\alpha\\) coefficients. 
 
 When the tracker is responding rapidly to a change in signal level (an increase for the high-pressure envelope or a decrease for the low-pressure envelope), it is said to be in attack mode. The attack coefficient α_A is small (around 0.5 in our implementation at 100 samples/sec), so that the tracker quickly forgets past estimates. When the tracker is responding slowly (to a decrease in pressure for the high-pressure envelope or an increase for the low-pressure envelope), it is said to be in release mode. The release coefficient α_R is large (around 0.999 in our implementation) so that the envelope decays slowly.
 
@@ -53,14 +53,14 @@ When a mode switch occurs, the previous attack value is used to update the corre
 
 $$PIP[n]=\alpha_S PIP[n-1]+(1-\alpha_S)(last high pressure peak)$$
 $$PEEP[n]=\alpha_S PEEP[n-1]+(1-\alpha_S)(last low pressure peak)$$
-where \\((\alpha_S))\\ is a smoothing coefficient (we use 0.5) and the time index n counts breath cycles (not samples).
+where \\(\alpha_S\\) is a smoothing coefficient (we use 0.5) and the time index n counts breath cycles (not samples).
 
 TODO: PIP/PEEP diagram
 
 The system also keeps track of the time elapsed between these mode-switch events. A complete breath cycle is measured between high-pressure peaks. Thus, the respiratory rate is given by
 $$ RR[n]=\alpha_S RR[n-1]+(1-\alpha_S)\frac{60\times sample rate}{samples between peak n-1 and peak n} $$
 
-* Strictly speaking, the RapidAlarm tracks the minimum pressure reached during the breathing cycle. During mandatory breathing, when the ventilator initiates all breaths, this is the same as the PEEP level at which the valve triggers. However, when the ventilator is operating in assisted-breathing mode, the patient’s spontaneous breaths cause the pressure to fall below the valve’s trigger point. In this case, the displayed pressure is lower than the ventilator’s PEEP setting.
+\* Strictly speaking, the RapidAlarm tracks the minimum pressure reached during the breathing cycle. During mandatory breathing, when the ventilator initiates all breaths, this is the same as the PEEP level at which the valve triggers. However, when the ventilator is operating in assisted-breathing mode, the patient’s spontaneous breaths cause the pressure to fall below the valve’s trigger point. In this case, the displayed pressure is lower than the ventilator’s PEEP setting.
 
 ## Alarm conditions
 
@@ -79,7 +79,7 @@ TODO: different non-cycling conditions
 
 First, the alarm triggers if too much time has passed since the last attack event. For example, if the pressure drops to PEEP and remains constant, as shown in ????, there will be no attack events in the high-pressure envelope tracker, so it will trigger the alarm. If, however, the pressure fluctuates slightly over time, the tracking algorithm will still detect frequent peaks, as shown in ????.
 
-To handle this case, the alarm will also trigger if the high-pressure envelope and low-pressure envelope are too close together. In the Illinois RapidVent and similar pressure-cycled ventilators, the ratio between PIP and PEEP is a constant determined by the mechanical design of the device. Thus, an alarm is triggered if \\((v_{high} [t]/v_{low} [t]))\\ drops too far below that nominal value. It also triggers if the difference \\((v_{high} [t] – v_{low} [t]))\\ is too small.
+To handle this case, the alarm will also trigger if the high-pressure envelope and low-pressure envelope are too close together. In the Illinois RapidVent and similar pressure-cycled ventilators, the ratio between PIP and PEEP is a constant determined by the mechanical design of the device. Thus, an alarm is triggered if \\(v_{high} [t]/v_{low} [t]\\) drops too far below that nominal value. It also triggers if the difference \\(v_{high} [t] – v_{low} [t]\\) is too small.
 
 The alarm-triggering conditions are summarized in the table below:
 | Alarm |	Condition |
@@ -90,18 +90,18 @@ The alarm-triggering conditions are summarized in the table below:
 | High rate | RR[n]>high RR threshold |
 | Noncycling | Time since last high pressure attack > alarm time 
 Time since last low pressure attack > alarm time
-$$v_{high}[t] / v_{low}[t]  < alarm ratio $$
-$$v_{high}[t]– v_{low}[t]< alarm ratio $$|
+$$ v_{high}[t] / v_{low}[t]  < alarm ratio $$
+$$ v_{high}[t]– v_{low}[t]< alarm ratio $$|
 
 ## Calculating the release coefficient
 
 The rate of decay of the envelope tracker depends on the release coefficient, alpha_R. The filter should adapt quickly enough to keep up with changes in pressure settings and to react to non-cycling conditions, but not so quickly that it registers false breaths or triggers a false alarm during normal breathing.
 
 In our implementation, we have set alpha_R so that, if the pressure were to fall suddenly from PIP to PEEP and remain constant at PEEP, the noncycling alarm’s high-to-low-envelope ratio condition would be triggered at around the same time as its time-since-last-high-pressure-attack condition for the default alarm setting. In this scenario, the high-pressure envelope decays as
-$$ v_{high} [t]=PEEP+\alpha_R^{t-t_0} (PIP-PEEP),$$
-where \\((t_0))\\ is the time at which the pressure drop occurs. The alarm will therefore be triggered when
-$$ v_{high} [t]=alarm ratio \times PEEP $$
+$$ v_{high} [t]=PEEP+\alpha_R^{t-t_0} (PIP-PEEP), $$
+where \\(t_0\\) is the time at which the pressure drop occurs. The alarm will therefore be triggered when
+$$ v_{high} [t]=alarm ratio \times PEEP, $$
 or 
-$$ alarm ratio=1+\alpha_R^{t-t_0} (\frac{PIP}{PEEP}-1) $$
-Setting the elapsed time to the default alarm time and solving for \\((\alpha_R))\\, we have
+$$ alarm ratio=1+\alpha_R^{t-t_0} (\frac{PIP}{PEEP}-1). $$
+Setting the elapsed time to the default alarm time and solving for \\(\alpha_R\\), we have
 $$\alpha_R=\left(\frac{alarm ratio-1}{nominal ratio-1}\right)^{1/(alarm time \times sample rate)}.$$
