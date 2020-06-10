@@ -8,7 +8,7 @@
 [Legal Disclaimer](legal.md)
 [User Guide](userguide.md)
 [Assembly Instructions](hardware.md)
-<!-- [Theory of Operation](algorithm.md) -->
+[Paper](https://arxiv.org/abs/2006.03664)
 
 [Source](https://github.com/rapidalarm/rapidalarm)
 
