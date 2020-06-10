@@ -4,11 +4,11 @@
 
 <iframe style="display: block;margin: 3em auto 3em auto; width: 75%;" height="315" src="https://www.youtube.com/embed/8bSyTYTYtEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-The Illinois RapidAlarm is a sensor and alarm module for use with emergency pressure-cycled ventilators such as the [Illinois RapidVent](https://rapidvent.grainger.illinois.edu/) that do not have built-in monitoring systems. The module connects to a ventilator circuit and monitors the pressure delivered to the patient airway. It produces an audible alarm when it detects a problem with the ventilator, such as a disconnection or obstruction, and also displays information about airway pressure and breathing rate. The Illinois RapidAlarm is designed to be quickly produced from readily available parts. The device can be assembled by hand or manufactured. This website contains open-source hardware designs, firmware code, and documentation to allow anyone to build their own Illinois RapidAlarm or to adapt the design to their own needs.
+The Illinois RapidAlarm is a sensor and alarm module for use with emergency pressure-cycled ventilators such as the [Illinois RapidVent](https://rapidvent.grainger.illinois.edu/) that do not have built-in monitoring systems. The module connects to a ventilator circuit and monitors the pressure delivered to the patient airway. It produces an audible alarm when it detects a problem with the ventilator, such as a disconnection or obstruction, and also displays information about airway pressure and breathing rate. The Illinois RapidAlarm is designed to be quickly produced from readily available parts. The device can be assembled by hand or manufactured. This website contains open-source hardware designs, firmware code, and documentation to allow anyone to build their own Illinois RapidAlarm or to adapt the design to their own needs. 
 
 ## Overview
 
-Many emergency ventilators that have been developed in response to the COVID-19 pandemic do not have monitoring and alarm features that are available on more advanced ventilators. Pressure-cycled ventilators like the [Illinois RapidVent](https://rapidvent.grainger.illinois.edu/) are relatively easy to produce and are powered by air pressure, making them convenient solutions for emergency ventilation, but they require constant supervision by medical personnel. An external monitoring device, like the Illinois RapidAlarm, can provide important information to caregivers and alert them to problems that require immediate attention. 
+Many emergency ventilators that have been developed in response to the COVID-19 pandemic do not have monitoring and alarm features that are available on more advanced ventilators. Pressure-cycled pneumatic ventilators like the [Illinois RapidVent](https://rapidvent.grainger.illinois.edu/) are relatively easy to produce and are powered by air pressure, making them convenient solutions for emergency ventilation, but they require constant supervision by medical personnel. An external monitoring device, like the Illinois RapidAlarm, can provide important information to clinicians and alert them to problems that require immediate attention. 
 
 ![](pictures/labeled_photos.png)
 
@@ -39,6 +39,7 @@ This website and the [Illinois RapidAlarm repository on Github](https://github.c
 - [Firmware source code to run on the microcontroller](https://github.com/rapidalarm/rapidalarm/tree/master/code)
 - [Instructions for producing and assembling the device](hardware.md)
 - [User documentation](userguide.md)
+- [arXiv paper describing algorithm](https://arxiv.org/abs/2006.03664)
 
 ## Specifications
 
